@@ -6,7 +6,7 @@ import RangeInputs from "./RangeInputs";
 
 function Form(){
     return (
-    <div className="col-sm-6 col-md-10 mx-auto">
+    <div className="col-md-12">
     <div><br/><br/><FormHeader/></div>
     <TextualInputs/>
     <Sizing/>
