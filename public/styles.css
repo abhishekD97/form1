@@ -1,0 +1,43 @@
+html, body
+{
+    font-family: 'Raleway', sans-serif;
+}
+
+.formHeader
+{
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 0.5vh;
+    margin-top: 3vh;
+}
+
+.capitalize
+{
+    text-transform: capitalize;
+}
+
+.label
+{
+    display: inline-block !important;
+}
+
+.input
+{
+    display: inline-block !important;
+}
+
+.form
+{
+
+}
+
+.smallerWidth
+{
+    width: 3rem;
+}
+
+input, label
+{
+    margin: 3vh auto;
+}
