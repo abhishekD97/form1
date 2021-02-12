@@ -58,5 +58,31 @@ function SmallerTextArea(props){
     );
 }
 
+function CheckboxInputLeft(props) {
+    return (
+        <div>
+        <input className="form-check-input input mx-auto" checked={props.checked ? "checked" : null} type="checkbox" value="" id="flexCheckDefault"/>
+        <p className="ml-4 label">{props.l}</p>
+        </div>
+    );
+}
+
+function CheckboxInputRight(props) {
+    return (
+        <div id="checkboxId">
+        <p className="label">{props.l}</p>
+        <input className="input ml-2" checked={props.checked ? "checked" : null} type="checkbox"/>
+        </div>
+    );
+}
+
+function Radio(props){
+    return (
+        <div>
+
+        </div>
+    );
+}
+
 export default Input;
-export { SmallerInput, SelectInput, DataList, SmallerTextArea }
+export { SmallerInput, SelectInput, DataList, SmallerTextArea, CheckboxInputLeft, CheckboxInputRight }

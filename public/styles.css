@@ -1,6 +1,6 @@
 html, body
 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif !important;
     justify-content: center;
 }
 
@@ -21,6 +21,8 @@ html, body
 .label
 {
     display: inline-block !important;
+    font-size: 15px;
+    font-weight: normal;
 }
 
 .input
@@ -40,10 +42,42 @@ html, body
 
 .smallerWidth
 {
-    width: 3rem;
+    width: 44px;
+    height: 35px;
+    margin-top: 2vh;
+    position: relative;
+    top: 3px;
+    border-radius: 6px;
+    padding: 4px;
 }
 
 input, label
 {
     margin: 3vh auto;
 }
+
+
+
+@media only screen and (max-width: 768px) 
+{
+    .borderSmallScreen
+    {
+        border: 1px solid;
+        margin-top: 12px;
+        margin-bottom: 5px;
+    }
+}
+
+/* #checkboxId input[type="checkbox"]:checked {
+    background-color: violet !important;
+}
+
+#checkboxId input[type="checkbox"]::before {
+    background-color: white !important
+    border-color: #face00 !important;
+}
+
+#checkboxId input[type="checkbox"]{
+    background-color: #990000 !important;  border-color: #990000 !important;
+    color: red !important;
+} */

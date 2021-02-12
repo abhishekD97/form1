@@ -38,17 +38,20 @@ function RangeInputs(){
             <br/>
             <div className="row centerJustify">
             <div className="col-md-5">
-            <RangeSlider value={sliderValueOne} onChange={sliderFunctionOne} onAfterChange={sliderFunctionSetOne}/>
+            <p className="formHeader col-md-4">Min:0 Max:100</p>
+            <RangeSlider className="hey" value={sliderValueOne} onChange={sliderFunctionOne} onAfterChange={sliderFunctionSetOne}/>
             </div>
             <div className="col-md-1"></div><br/>
             <div className="col-md-5">
-            <RangeSlider value={sliderValueTwo} onChange={sliderFunctionTwo} onAfterChange={sliderFunctionSetTwo}/>
+            <p className="formHeader col-md-4">Min:0 Max:5</p>
+            <RangeSlider variant="danger" min="0" max="5" step="1" value={sliderValueTwo} onChange={sliderFunctionTwo} onAfterChange={sliderFunctionSetTwo}/>
             </div>
             </div>
             <br/>
             <div className="row centerJustify">
             <div className="col-md-5">
-            <RangeSlider value={sliderValueThree} onChange={sliderFunctionThree} onAfterChange={sliderFunctionSetThree}/>
+            <p className="formHeader col-md-4">Min:0 Max:5</p>
+            <RangeSlider variant="dark" min="0" max="5" step="0.5" value={sliderValueThree} onChange={sliderFunctionThree} onAfterChange={sliderFunctionSetThree}/>
             </div>
             <div className="col-md-1"></div>
             <div className="col-md-5">
