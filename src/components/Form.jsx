@@ -3,6 +3,7 @@ import FormHeader from "./formHeader";
 import TextualInputs from "./TextualInputs";
 import Sizing from "./Sizing";
 import RangeInputs from "./RangeInputs";
+import Checkboxes from "./Checkboxes";
 
 function Form(){
     return (
@@ -11,6 +12,7 @@ function Form(){
     <TextualInputs/>
     <Sizing/>
     <RangeInputs/>
+    <Checkboxes/>
     </div>
     );
 }
