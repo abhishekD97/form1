@@ -30,11 +30,6 @@ html, body
     display: inline-block !important;
 }
 
-.form
-{
-
-}
-
 .centerJustify
 {
     justify-content: center;
@@ -56,7 +51,14 @@ input, label
     margin: 3vh auto;
 }
 
+/* Right Checkbox */
 
+/* -------------- */
+
+.checkboxHeader
+{
+    margin-bottom: 0;
+}
 
 @media only screen and (max-width: 768px) 
 {
@@ -65,19 +67,6 @@ input, label
         border: 1px solid;
         margin-top: 12px;
         margin-bottom: 5px;
+        padding: 15px;
     }
 }
-
-/* #checkboxId input[type="checkbox"]:checked {
-    background-color: violet !important;
-}
-
-#checkboxId input[type="checkbox"]::before {
-    background-color: white !important
-    border-color: #face00 !important;
-}
-
-#checkboxId input[type="checkbox"]{
-    background-color: #990000 !important;  border-color: #990000 !important;
-    color: red !important;
-} */
