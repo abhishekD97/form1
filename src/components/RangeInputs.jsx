@@ -39,7 +39,7 @@ function RangeInputs(){
             <div className="row centerJustify">
             <div className="col-md-5">
             <p className="formHeader col-md-4">Min:0 Max:100</p>
-            <RangeSlider className="hey" value={sliderValueOne} onChange={sliderFunctionOne} onAfterChange={sliderFunctionSetOne}/>
+            <RangeSlider value={sliderValueOne} onChange={sliderFunctionOne} onAfterChange={sliderFunctionSetOne}/>
             </div>
             <div className="col-md-1"></div><br/>
             <div className="col-md-5">

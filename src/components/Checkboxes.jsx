@@ -8,30 +8,30 @@ function Checkboxes(){
             <p className="formHeader col-md-2">Checkboxes</p>
             <div className="row mx-auto">
             <span className="col-md-3 borderSmallScreen">
-            <p><span style={{color:"blue"}}>➝</span> Form Checkboxes</p>
-            <CheckboxInputLeft l="Form Checkbox"/>
-            <CheckboxInputLeft l="Form Checkbox Checked" checked="yes"/>
+            <p className="checkboxHeader"><span style={{color:"blue"}}>➝</span> Form Checkboxes</p>
+            <CheckboxInputLeft name="FormCheckbox" id="FormCheckbox" l="Form Checkbox"/>
+            <CheckboxInputLeft checked="checked" name="FormCheckboxChecked" id="FormCheckboxChecked" l="Form Checkbox Checked"/>
             </span>
             <span className="col-md-3 borderSmallScreen">
-            <p><span style={{color:"blue"}}>➝</span> Form Checkboxes Right</p>
-            <CheckboxInputRight l="Form Checkbox Right"/>
-            <CheckboxInputRight l="Form Checkbox Right Checked" checked="yes"/>
+            <p className="checkboxHeader"><span style={{color:"blue"}}>➝</span> Form Checkboxes Right</p>
+            <CheckboxInputRight name="FormCheckboxRight" id="FormCheckboxRight" l="Form Checkbox Right"/>
+            <CheckboxInputRight name="FormCheckboxRightChecked" id="FormCheckboxRightChecked" l="Form Checkbox Right Checked"/>
             </span>
             <span className="col-md-3 borderSmallScreen">
-            <p><span style={{color:"blue"}}>➝</span> Form Checkboxes Colors</p>
-            <CheckboxInputLeft l="Checkbox Primary"/>
-            <CheckboxInputLeft l="Checkbox Success"/>
-            <CheckboxInputLeft l="Checkbox Info"/>
-            <CheckboxInputLeft l="Checkbox Warning"/>
-            <CheckboxInputLeft l="Checkbox Danger"/>
+            <p className="checkboxHeader"><span style={{color:"blue"}}>➝</span> Form Checkboxes Colors</p>
+            <CheckboxInputLeft name="CheckboxPrimary" id="CheckboxPrimary" l="Checkbox Primary"/>
+            <CheckboxInputLeft name="CheckboxSuccess" id="CheckboxSuccess" l="Checkbox Success"/>
+            <CheckboxInputLeft name="CheckboxInfo" id="CheckboxInfo" l="Checkbox Info"/>
+            <CheckboxInputLeft name="CheckboxWarning" id="CheckboxWarning" l="Checkbox Warning"/>
+            <CheckboxInputLeft name="CheckboxDanger" id="CheckboxDanger" l="Checkbox Danger"/>
             </span>
             <span className="col-md-3 borderSmallScreen">
-            <p><span style={{color:"blue"}}>➝</span> Form Checkboxes Outline</p>
-            <CheckboxInputLeft l="Checkbox Outline Primary"/>
-            <CheckboxInputLeft l="Checkbox Outline Success"/>
-            <CheckboxInputLeft l="Checkbox Outline Info"/>
-            <CheckboxInputLeft l="Checkbox Outline Warning"/>
-            <CheckboxInputLeft l="Checkbox Outline Danger"/>
+            <p className="checkboxHeader"><span style={{color:"blue"}}>➝</span> Form Checkboxes Outline</p>
+            <CheckboxInputLeft name="CheckboxOutlinePrimary" id="CheckboxOutlinePrimary" l="Checkbox Outline Primary"/>
+            <CheckboxInputLeft name="CheckboxOutlineSuccess" id="CheckboxOutlineSuccess" l="Checkbox Outline Success"/>
+            <CheckboxInputLeft name="CheckboxOutlineInfo" id="CheckboxOutlineInfo" l="Checkbox Outline Info"/>
+            <CheckboxInputLeft name="CheckboxOutlineWarning" id="CheckboxOutlineWarning" l="Checkbox Outline Warning"/>
+            <CheckboxInputLeft name="CheckboxOutlineDanger" id="CheckboxOutlineDanger" l="Checkbox Outline Danger"/>
             </span>
             </div>
         </div>

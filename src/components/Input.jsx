@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 
 function Input(props){
@@ -59,19 +59,32 @@ function SmallerTextArea(props){
 }
 
 function CheckboxInputLeft(props) {
+    const [checkboxState, setCheckboxState] = useState(false);
+
+    function setCheckboxFunction(e)
+    {
+        setCheckboxState(!checkboxState);
+    }
+
     return (
-        <div>
-        <input className="form-check-input input mx-auto" checked={props.checked ? "checked" : null} type="checkbox" value="" id="flexCheckDefault"/>
-        <p className="ml-4 label">{props.l}</p>
+        <div className="custom-control custom-checkbox">
+            <input type="checkbox" className="custom-control-input" value={checkboxState ? "checked" : ""} onClick={setCheckboxFunction} id={props.id} name={props.name}/>
+            <label className="custom-control-label" for={props.id}>{props.l}</label>
         </div>
     );
 }
 
 function CheckboxInputRight(props) {
+    const [checkboxStateRight, setCheckboxStateRight] = useState(false);
+
+    function setCheckboxRightFunction(e)
+    {
+        setCheckboxStateRight(!checkboxStateRight);
+    }
     return (
-        <div id="checkboxId">
-        <p className="label">{props.l}</p>
-        <input className="input ml-2" checked={props.checked ? "checked" : null} type="checkbox"/>
+        <div className="custom-control custom-checkbox">
+            <input type="checkbox" className="custom-control-input" value={checkboxStateRight ? "checked" : ""} onClick={setCheckboxRightFunction} id={props.id} name={props.name}/>            
+            <label className="custom-control-label" for={props.id}>{props.l}</label>
         </div>
     );
 }
