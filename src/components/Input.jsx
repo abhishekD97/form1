@@ -61,8 +61,8 @@ function SmallerTextArea(props){
 
 function CheckboxInputLeft(props){
     let color = props.color ? props.color : " btn-primary";
-    let classNames1 = "btn activeBtn " + color;
-    let classNames2 = "btn btn-outline-dark inActiveBtn";
+    let classNames1 = "btn " + color;
+    let classNames2 = "btn btn-outline-dark";
     const [isActive, setIsActive] = useState(false);
 
     function toggleClass(e){
@@ -73,7 +73,7 @@ function CheckboxInputLeft(props){
         <div>
         <table>
         <tr>
-            <td type="button" className={isActive ? classNames1 : classNames2} onClick={toggleClass}>✔</td>
+            <td type="button" id={isActive ? "activeBtn" : "inActiveBtn"} className={isActive ? classNames1 : classNames2} onClick={toggleClass}>✔</td>
             <td className="label ml-1">{props.l}</td>
         </tr>
         </table>
@@ -93,7 +93,7 @@ function CheckboxInputRight(props){
         <table className="a">
         <tr>
             <td><span className="label">{props.l}</span></td>
-            <td><span type="button" className={isActive ? "btn btn-dark activeBtn" : "btn btn-outline-dark inActiveBtn"} onClick={toggleClass}>✔</span></td>
+            <td><span type="button" id={isActive ? "activeBtn" : "inActiveBtn"} className={isActive ? "btn btn-dark" : "btn btn-outline-dark"} onClick={toggleClass}>✔</span></td>
         </tr>
         </table>
         </div>
