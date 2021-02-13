@@ -3,4 +3,15 @@
 //     "danger": rgb(236, 184, 184)
 // );
 
+// .btn:hover {
+//     color: white;
+//     text-decoration: none;
+//   }
+
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: white;
+    border-color: #343a40;
+  }

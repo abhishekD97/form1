@@ -9928,5 +9928,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.btn-outline-dark:hover {
+  color: #fff;
+  background-color: white;
+  border-color: #343a40;
+}
 
 /*# sourceMappingURL=bmain.css.map */
