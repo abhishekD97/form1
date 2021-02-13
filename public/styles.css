@@ -92,3 +92,28 @@ table.a {
         padding: 15px;
     }
 }
+/* RADIO CUSTOM */
+#inActiveRadio{
+    border-radius: 100%;
+    padding: 2px;
+    padding-top: 2px;
+    padding-bottom: 0.6px;
+    font-size: 8px;
+    font-weight: 900 !important;
+    background-color: white !important;
+    border-color: black !important;
+    text-indent: -9999em;
+    width: 13px !important;
+    height: 13px !important;
+    margin-right: 0.5px;
+}
+#activeRadio{
+    border-radius: 100%;
+    padding: 2.7px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    font-size: 4px;
+    font-weight: 900 !important;
+    margin-right: 1px;
+}
+/* ----------- */

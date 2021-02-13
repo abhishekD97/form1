@@ -100,14 +100,25 @@ function CheckboxInputRight(props){
     );
 }
 
-function Radio(){
+function Radio(props){
+    const [isActive, setIsActive] = useState(false);
+   
+    function toggleClass(e){
+        setIsActive(!isActive);
+    }
+
     return (
         <div>
-
+        <table>
+        <tr>
+            <td><span type="button" id={isActive ? "activeRadio" : "inActiveRadio"} className="btn btn-dark" onClick={toggleClass} state={props.state ? toggleClass : null}>⚪</span></td>
+            <td><span className="label">hey</span></td>
+        </tr>
+        </table>
         </div>
     );
 }
 
 
 export default Input;
-export { SmallerInput, SelectInput, DataList, SmallerTextArea, CheckboxInputLeft, CheckboxInputRight}
+export { SmallerInput, SelectInput, DataList, SmallerTextArea, CheckboxInputLeft, CheckboxInputRight, Radio}
