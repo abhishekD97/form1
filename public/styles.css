@@ -7,8 +7,8 @@ html, body
 .formHeader
 {
     text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: bolder;
     margin-bottom: 2vh;
     margin-top: 3vh;
 }
@@ -23,6 +23,15 @@ html, body
     display: inline-block !important;
     font-size: 15px;
     font-weight: normal;
+}
+
+.contentHeader
+{
+    text-transform: uppercase;
+    font-weight:600;
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-top: 8px;
 }
 
 .input
@@ -77,10 +86,13 @@ input, label
     margin-bottom: 3px;
 }
 
-table.a {
+table.a 
+{
     table-layout: fixed;
-    width: 490px;  
-  }
+    width: 450px;  
+}
+
+
 
 @media only screen and (max-width: 768px) 
 {
@@ -90,6 +102,11 @@ table.a {
         margin-top: 12px;
         margin-bottom: 5px;
         padding: 15px;
+    }
+
+    .buttonStyle
+    {
+        margin-left: 0px !important;
     }
 }
 /* RADIO CUSTOM */

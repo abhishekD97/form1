@@ -4,7 +4,7 @@ import Input, {SmallerInput, SelectInput, DataList} from "./Input";
 function TextualInputs(props){
     return (
         <div  className="form">
-        <p className="formHeader col-md-2">Textual inputs</p>
+        <p className="contentHeader col-md-2">Textual inputs</p>
         <Input t="text" l="text"/>
         <Input t="search" l="search"/>
         <Input t="email" l="email"/>

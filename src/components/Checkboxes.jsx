@@ -5,7 +5,7 @@ import {CheckboxInputLeft, CheckboxInputRight} from "./Input";
 function Checkboxes(){
     return (
         <div>
-            <p className="formHeader col-md-2">Checkboxes</p>
+            <p className="contentHeader col-md-2">Checkboxes</p>
             <div className="row mx-auto">
             <span className="col-md-3 borderSmallScreen">
             <p className="checkboxHeader"><span style={{color:"blue"}}>➝</span> Form Checkboxes</p>
@@ -15,7 +15,7 @@ function Checkboxes(){
             <span className="col-md-3 borderSmallScreen">
             <p className="checkboxHeader"><span style={{color:"blue"}}>➝</span> Form Checkboxes Right</p>
             <CheckboxInputRight l="Form Checkbox Right"/>
-            <CheckboxInputRight l="Form Checkbox Right Checked"/>
+            <CheckboxInputRight l="Checkbox Right Checked"/>
             </span>
             <span className="col-md-3 borderSmallScreen">
             <p className="checkboxHeader"><span style={{color:"blue"}}>➝</span> Form Checkboxes Colors</p>

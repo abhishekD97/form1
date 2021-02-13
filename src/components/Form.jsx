@@ -8,7 +8,7 @@ import Radios from "./Radios";
 
 function Form(){
     return (
-    <div className="col-md-12">
+    <div className="col-md-10">
     <div><br/><br/><FormHeader/></div>
     <TextualInputs/>
     <Sizing/>

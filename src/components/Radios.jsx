@@ -5,7 +5,7 @@ function Radios(){
     // radio1 section 1 states
     const [radioSection1, setRadioSection1] = useState({
         radio1 : false,
-        radio2 : false
+        radio2 : true
     })
 
     function toggleRadio1(e){
@@ -28,7 +28,7 @@ function Radios(){
    // radio2 section 2 states
     const [radioSection2, setRadioSection2] = useState({
         radio1 : false,
-        radio2 : false
+        radio2 : true
     })
 
     function toggleRadio2(e){
@@ -52,7 +52,7 @@ function Radios(){
     const [radioSection3, setRadioSection3] = useState({
         radio1 : false,
         radio2 : false,
-        radio3 : false,
+        radio3 : true,
         radio4 : false,
         radio5 : false
 
@@ -110,7 +110,7 @@ function Radios(){
         radio1 : false,
         radio2 : false,
         radio3 : false,
-        radio4 : false,
+        radio4 : true,
         radio5 : false
     })
     
@@ -165,7 +165,7 @@ function Radios(){
 
     return (
         <div>
-            <p className="formHeader col-md-2">Checkboxes</p>
+            <p className="contentHeader col-md-2">Radios</p>
             <div className="row mx-auto">
             {/* Radio Section 1 */}
             <span className="col-md-3 borderSmallScreen">
@@ -191,7 +191,7 @@ function Radios(){
             <td><span name="1" type="button" id={radioSection2.radio1 ? "activeRadio" : "inActiveRadio"} className="btn btn-dark ml-5" onClick={toggleRadio2}>⚪</span></td>
             </tr>
             <tr>
-            <td><span className="label">Form Radio Right Checked</span></td>
+            <td><span className="label">Radio Right Checked</span></td>
             <td><span name="2" type="button" id={radioSection2.radio2 ? "activeRadio" : "inActiveRadio"} className="btn btn-dark ml-5" onClick={toggleRadio2}>⚪</span></td>
             </tr>
             </table>

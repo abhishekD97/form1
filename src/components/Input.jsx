@@ -1,12 +1,34 @@
 import React, {useState} from "react";
-import { Row } from "react-bootstrap";
-
 
 function Input(props){
+    const [inputValue, setInputValue] = useState("");
+    
+    function handleValue(e){
+        setInputValue(e.target.value);
+    }
+
+    function setValue(e){
+        e.preventDefault();
+        let type = e.target[0].type;
+        if(inputValue.length == 0){
+            console.log("Field empty");
+        }else{
+        setInputValue(inputValue);
+        type == "password" ? console.log("Password Entered Successfully") : console.log(inputValue);
+    }
+    }
+
+    function preventDef(e){
+        e.preventDefault();
+    }
+
     return (
     <div>
+    <form onSubmit={setValue}>
         <label className="capitalize col-md-2 label">{props.l}</label>
-        <input className="col-md-8 form-control input" type={props.t} placeholder={props.placeHolder ? props.placeHolder : null}/>
+        <input onChange={handleValue} value={inputValue} className="col-md-8 form-control input" autoComplete="off" type={props.t} placeholder={props.placeHolder ? props.placeHolder : null}/>
+        <button type="submit" className="btn btn-md btn-dark ml-3 buttonStyle">Enter</button><br/>
+    </form>
     </div>
     );
 }
