@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Row } from "react-bootstrap";
 
 
 function Input(props){
@@ -58,44 +59,55 @@ function SmallerTextArea(props){
     );
 }
 
-function CheckboxInputLeft(props) {
-    const [checkboxState, setCheckboxState] = useState(false);
+function CheckboxInputLeft(props){
+    let color = props.color ? props.color : " btn-primary";
+    let classNames1 = "btn activeBtn " + color;
+    let classNames2 = "btn btn-outline-dark inActiveBtn";
+    const [isActive, setIsActive] = useState(false);
 
-    function setCheckboxFunction(e)
-    {
-        setCheckboxState(!checkboxState);
+    function toggleClass(e){
+        setIsActive(!isActive);
     }
 
-    return (
-        <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" value={checkboxState ? "checked" : ""} onClick={setCheckboxFunction} id={props.id} name={props.name}/>
-            <label className="custom-control-label" for={props.id}>{props.l}</label>
-        </div>
-    );
-}
-
-function CheckboxInputRight(props) {
-    const [checkboxStateRight, setCheckboxStateRight] = useState(false);
-
-    function setCheckboxRightFunction(e)
-    {
-        setCheckboxStateRight(!checkboxStateRight);
-    }
-    return (
-        <div className="custom-control custom-checkbox">
-            <input type="checkbox" className="custom-control-input" value={checkboxStateRight ? "checked" : ""} onClick={setCheckboxRightFunction} id={props.id} name={props.name}/>            
-            <label className="custom-control-label" for={props.id}>{props.l}</label>
-        </div>
-    );
-}
-
-function Radio(props){
     return (
         <div>
-
+        <table>
+        <tr>
+            <td className={isActive ? classNames1 : classNames2} onClick={toggleClass}>✔</td>
+            <td className="label ml-1">{props.l}</td>
+        </tr>
+        </table>
         </div>
     );
 }
 
+function CheckboxInputRight(props){
+    const [isActive, setIsActive] = useState(false);
+
+    function toggleClass(e){
+        setIsActive(!isActive);
+    }
+
+    return (
+        <div>
+        <table className="a">
+        <tr>
+            <td><span className="label">{props.l}</span></td>
+            <td><span className="btn btn-outline-dark inActiveBtn" className={isActive ? "btn btn-dark activeBtn" : "btn btn-outline-dark inActiveBtn"} onClick={toggleClass}>✔</span></td>
+        </tr>
+        </table>
+        </div>
+    );
+}
+
+function Radio(){
+    return (
+        <div>
+            
+        </div>
+    );
+}
+
+
 export default Input;
-export { SmallerInput, SelectInput, DataList, SmallerTextArea, CheckboxInputLeft, CheckboxInputRight }
+export { SmallerInput, SelectInput, DataList, SmallerTextArea, CheckboxInputLeft, CheckboxInputRight}
