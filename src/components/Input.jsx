@@ -73,7 +73,7 @@ function CheckboxInputLeft(props){
         <div>
         <table>
         <tr>
-            <td className={isActive ? classNames1 : classNames2} onClick={toggleClass}>✔</td>
+            <td type="button" className={isActive ? classNames1 : classNames2} onClick={toggleClass}>✔</td>
             <td className="label ml-1">{props.l}</td>
         </tr>
         </table>
@@ -93,7 +93,7 @@ function CheckboxInputRight(props){
         <table className="a">
         <tr>
             <td><span className="label">{props.l}</span></td>
-            <td><span className="btn btn-outline-dark inActiveBtn" className={isActive ? "btn btn-dark activeBtn" : "btn btn-outline-dark inActiveBtn"} onClick={toggleClass}>✔</span></td>
+            <td><span type="button" className={isActive ? "btn btn-dark activeBtn" : "btn btn-outline-dark inActiveBtn"} onClick={toggleClass}>✔</span></td>
         </tr>
         </table>
         </div>
@@ -103,7 +103,7 @@ function CheckboxInputRight(props){
 function Radio(){
     return (
         <div>
-            
+
         </div>
     );
 }
