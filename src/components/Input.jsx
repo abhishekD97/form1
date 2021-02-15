@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Next } from "react-bootstrap/esm/PageItem";
 
 function Input(props){
     const [inputValue, setInputValue] = useState("");
@@ -89,13 +90,14 @@ function CheckboxInputLeft(props){
 
     function toggleClass(e){
         setIsActive(!isActive);
+        console.log(e.target.attributes.name.value + ":" + !isActive );
     }
 
     return (
         <div>
         <table>
         <tr>
-            <td type="button" id={isActive ? "activeBtn" : "inActiveBtn"} className={isActive ? classNames1 : classNames2} onClick={toggleClass}>✔</td>
+            <td name={props.l} type="button" id={isActive ? "activeBtn" : "inActiveBtn"} className={isActive ? classNames1 : classNames2} onClick={toggleClass}>✔</td>
             <td className="label ml-1">{props.l}</td>
         </tr>
         </table>
@@ -108,6 +110,7 @@ function CheckboxInputRight(props){
 
     function toggleClass(e){
         setIsActive(!isActive);
+        console.log(e.target.attributes.name.value + ":" + !isActive );
     }
 
     return (
@@ -115,7 +118,7 @@ function CheckboxInputRight(props){
         <table className="a">
         <tr>
             <td><span className="label">{props.l}</span></td>
-            <td><span type="button" id={isActive ? "activeBtn" : "inActiveBtn"} className={isActive ? "btn btn-dark" : "btn btn-outline-dark"} onClick={toggleClass}>✔</span></td>
+            <td><span name={props.l} type="button" id={isActive ? "activeBtn" : "inActiveBtn"} className={isActive ? "btn btn-dark" : "btn btn-outline-dark"} onClick={toggleClass}>✔</span></td>
         </tr>
         </table>
         </div>
@@ -141,6 +144,69 @@ function Radio(props){
     );
 }
 
+function Switch(props){
+    let c = (props.switch == "on") ? false : true;
+    const [switchState, setSwitchState] = useState(c);
+    
+
+    function setSwitchFunction(e){
+        setSwitchState(!switchState);
+        console.log(switchState);
+        c = "";
+    }
+
+    return (
+        <div>
+            <label className={props.size=="lg" ? "switchL mr-2" : props.size=="sm" ? "switchS mr-2" : props.size=="def" ? "switch mr-2" : "switch mr-2"}>
+            <input type="checkbox" disabled={props.state ? true : false } value={switchState ? true  : false} onClick={setSwitchFunction}/>
+            <span class="slider round" className={props.size=="lg" ? "sliderL round" : props.size=="sm" ? "sliderS round" : props.size=="def" ? "slider round" : "slider round"}></span>
+            </label>
+            <p className="switchLabel">{props.l}</p>
+        </div>
+    );
+}
+
+{/* <input onClick={fun} type="file" className="Actualinputfile"/>
+        <span className="fakeInputSection">
+        <p className="fakeFileLabel">Choose File</p><input disabled placeholder="File" className="fakeFileInput"/>
+        </span> */}
+
+function FileInput(props){
+    return (
+        <div>
+        <div className="form-group">
+        <div className="custom-file">
+        <input type="file" className={props.size=="sm" ? "custom-file-input form-control-sm" : props.size=="lg" ? "custom-file-input form-control-lg" : "custom-file-input form-control-md"} id="customFile"/>
+        <label className="custom-file-label col-form-label-sm" className={props.size=="sm" ? "custom-file-label col-form-label-sm" : props.size=="lg" ? "custom-file-label col-form-label-lg" : "custom-file-label col-form-label-md"} for="customFile">{props.l}</label>
+        </div>
+        </div>
+        </div>
+    );
+}
+
+function FileInputCustom(props){
+    return (
+        <div>
+        <table>
+        <tr>
+        <td>
+        <div className="form-group">
+        <div className="custom-file">
+        <input type="file" className={props.size=="sm" ? "custom-file-input form-control-sm" : props.size=="lg" ? "custom-file-input form-control-lg" : "custom-file-input form-control-md"} id="customFile"/>
+        <label className="custom-file-label col-form-label-sm" className={props.size=="sm" ? "custom-file-label col-form-label-sm" : props.size=="lg" ? "custom-file-label col-form-label-lg" : "custom-file-label col-form-label-md"} for="customFile">{props.l}</label>
+        </div>
+        </div>
+        </td>
+        <td>
+            <button className="btn btn-primary FileButton">Button</button>
+        </td>
+        </tr>
+        </table>
+        </div>
+    );
+}
+
+
 
 export default Input;
-export { SmallerInput, SelectInput, DataList, SmallerTextArea, CheckboxInputLeft, CheckboxInputRight, Radio}
+export { SmallerInput, SelectInput, DataList, SmallerTextArea, CheckboxInputLeft, CheckboxInputRight, Radio, Switch, FileInput, FileInputCustom}

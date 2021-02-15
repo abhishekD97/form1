@@ -72,6 +72,7 @@ html, body
     top: 3px;
     border-radius: 6px;
     padding: 4px;
+    background-color: rgba(228, 228, 228, 0.877);
 }
 
 input, label
@@ -79,6 +80,41 @@ input, label
     margin: 3vh auto;
 }
 
+
+.hr-text
+{
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    opacity: .5;
+    width: 30rem;
+}
+.hr-text::before
+{
+    content: '';
+    background: linear-gradient(to right, transparent, #818078, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    
+}
+.hr-text::after
+{
+    content: attr(data-content);
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding: 0 .5em;
+    line-height: 1.5em;
+    color: #818078;
+    background-color: #f2f2f2;
+}
 /* Right Checkbox */
 
 #inActiveBtn
@@ -127,6 +163,13 @@ table.a
     {
         margin-left: 0px !important;
     }
+    .FileButton
+    {
+    margin-left: -2px;
+    border-radius: 0;
+    margin-top: 21px;
+    margin-bottom: 8px;
+    }
 }
 /* RADIO CUSTOM */
 #inActiveRadio{
@@ -164,4 +207,282 @@ table.a
     margin-right: 1px;
     color: transparent;
 }
-/* ----------- */
+/* Switch Slider CSS*/
+.switch 
+{
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 16px;
+    margin-bottom: 0px !important;
+}
+.switch input
+{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}/* Hide default HTML checkbox */
+
+  
+.slider
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}/* The slider */
+  
+.slider:before
+{
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider
+{
+    background-color: #2196F3;
+}
+  
+input:focus + .slider
+{
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before
+{
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+  
+  
+.slider.round
+{
+    border-radius: 34px;
+}/* Rounded sliders */
+  
+.slider.round:before
+{
+    border-radius: 50%;
+}
+
+.switchLabel
+{
+      display: inline-block;
+      position: relative;
+      bottom: 4px;
+      margin-bottom: 0px;
+}
+  /* Switch Slider Small CSS*/
+.switchS
+{
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 14px;
+    margin-bottom: 0px !important;
+}
+  
+.switchS input
+{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}/* Hide default HTML checkbox */
+
+  
+.sliderS
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}/* The slider */
+  
+.sliderS:before
+{
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 6px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .sliderS
+{
+    background-color: #2196F3;
+}
+  
+input:focus + .sliderS
+{
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .sliderS:before
+{
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+  
+  
+.sliderS.round
+{
+    border-radius: 34px;
+}/* Rounded sliders */
+  
+.sliderS.round:before
+{
+    border-radius: 50%;
+}
+  /* Switch Large Slider CSS*/
+.switchL
+{
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    margin-bottom: 0px !important;
+}
+  
+.switchL input
+{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}/* Hide default HTML checkbox */
+
+  
+.sliderL
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}/* The slider */
+  
+.sliderL:before
+{
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .sliderL
+{
+    background-color: #2196F3;
+}
+  
+input:focus + .sliderL
+{
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .sliderL:before
+{
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+  
+  
+.sliderL.round
+{
+    border-radius: 34px;
+}/* Rounded sliders */
+  
+.sliderL.round:before
+{
+    border-radius: 50%;
+}
+  /* FileBrowser */
+.FileButton
+{
+    margin-left: -2px;
+    border-radius: 0;
+    margin-top: 21px;
+}
+.custom-file-label
+{
+    border-radius: 0;
+}
+/* .Actualinputfile
+{
+ opacity: 0;
+ position: absolute; 
+ width: 38vw;  
+ z-index: 3;
+ cursor: pointer;
+}
+.fakeFileLabel
+{   position: absolute;
+    display: inline-block;
+    z-index: 2;
+    width: 110px;
+    
+    border: 1px solid;
+    padding: 4px;
+    border-right: none;
+    padding-left: 9px;
+    background-color: rgb(223, 232, 238);
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 0px !important;
+}
+.fakeFileLabel:hover
+{
+    background-color: #ced4da;
+    cursor: pointer;
+}
+.fakeFileLabel:checked
+{
+    background-color: #131212;
+}
+.fakeFileInput
+{
+    position: absolute;
+    left: 110px;
+    top: -19px;
+    width: 30vw;
+    border: 1px solid;
+    padding-left: 10px;
+    height: 32px;
+}
+.fakeInputSection
+{
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+} */
