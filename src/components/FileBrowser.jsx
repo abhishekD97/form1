@@ -14,21 +14,23 @@ function FileBrowser(){
         <br/>
         </span>
         <span className="col-md-5 borderSmallScreen">
-        <br/>
+        <p className="checkboxHeader"><span style={{color:"blue"}}>➝</span> Default file input Large</p>
         <FileInput l="Large file input" size="lg"/>
+        <br/>
         </span>
         </div>
         <div className="row mx-auto">
         <span className="col-md-5 borderSmallScreen">
         <p className="checkboxHeader"><span style={{color:"blue"}}>➝</span> Custom file input</p>
+        <br/>
         <FileInputCustom l="Default file input"/>
         <br/>
-        <FileInputCustom l="Small file input"/>
-        <br/>
+        <FileInputCustom l="Small file input" size="sm"/>
         </span>
         <span className="col-md-5 borderSmallScreen">
+        <p className="checkboxHeader"><span style={{color:"blue"}}>➝</span> Custom file input</p>
         <br/>
-        <FileInputCustom l="Large file input"/>
+        <FileInputCustom l="Large file input" size="lg"/>
         </span>
         </div>
         </div>

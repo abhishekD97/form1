@@ -174,10 +174,10 @@ function Switch(props){
 function FileInput(props){
     return (
         <div>
-        <div className="form-group">
+        <div className="form-group my-auto">
         <div className="custom-file">
         <input type="file" className={props.size=="sm" ? "custom-file-input form-control-sm" : props.size=="lg" ? "custom-file-input form-control-lg" : "custom-file-input form-control-md"} id="customFile"/>
-        <label className="custom-file-label col-form-label-sm" className={props.size=="sm" ? "custom-file-label col-form-label-sm" : props.size=="lg" ? "custom-file-label col-form-label-lg" : "custom-file-label col-form-label-md"} for="customFile">{props.l}</label>
+        <label className={props.size=="sm" ? "custom-file-label col-form-label-sm" : props.size=="lg" ? "custom-file-label col-form-label-lg" : "custom-file-label col-form-label-md"} for="customFile">{props.l}</label>
         </div>
         </div>
         </div>
@@ -190,15 +190,15 @@ function FileInputCustom(props){
         <table>
         <tr>
         <td>
-        <div className="form-group">
+        <div className="form-group my-auto">
         <div className="custom-file">
-        <input type="file" className={props.size=="sm" ? "custom-file-input form-control-sm" : props.size=="lg" ? "custom-file-input form-control-lg" : "custom-file-input form-control-md"} id="customFile"/>
-        <label className="custom-file-label col-form-label-sm" className={props.size=="sm" ? "custom-file-label col-form-label-sm" : props.size=="lg" ? "custom-file-label col-form-label-lg" : "custom-file-label col-form-label-md"} for="customFile">{props.l}</label>
+        <input type="file" className={props.size=="sm" ? "custom-file-input form-control-sm my-auto" : props.size=="lg" ? "custom-file-input form-control-lg my-auto" : "custom-file-input form-control-md my-auto"} id="customFile"/>
+        <label className={props.size=="sm" ? "custom-file-label col-form-label-sm my-auto" : props.size=="lg" ? "custom-file-label col-form-label-lg my-auto" : "custom-file-label col-form-label-md my-auto"} for="customFile">{props.l}</label>
         </div>
         </div>
         </td>
         <td>
-            <button className="btn btn-primary FileButton">Button</button>
+            <button className={props.size=="sm" ? "btn-sm btn-primary FileButtonS my-auto" : props.size=="lg" ? "btn-lg btn-primary FileButtonL my-auto" : "btn btn-primary FileButton my-auto"}>Button</button>
         </td>
         </tr>
         </table>
