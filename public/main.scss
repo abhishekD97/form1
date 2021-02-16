@@ -8,6 +8,11 @@
 //     text-decoration: none;
 //   }
 
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 .btn-outline-dark:hover {

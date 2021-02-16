@@ -13,9 +13,9 @@ function Switches(){
         </span>
         <span className="col-md-6 borderSmallScreen">
         <p className="checkboxHeader">Switch examples</p>
-            <Switch l="Default switch" size="sm"/>
+            <Switch l="Small switch" size="sm"/>
             <Switch l="Checked switch" size="def"/>
-            <Switch l="Disabled switch" size="lg"/>
+            <Switch l="Large switch" size="lg"/>
         </span>
         </div>
         </div>

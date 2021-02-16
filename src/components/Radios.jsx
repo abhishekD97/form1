@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {Radio} from "./Input";
 
 function Radios(){
     // radio1 section 1 states
@@ -24,6 +23,7 @@ function Radios(){
                     }
                 }
             } )
+            console.log("Section 1 Radio" + " " + c + " true");
     }
    // radio2 section 2 states
     const [radioSection2, setRadioSection2] = useState({
@@ -47,6 +47,7 @@ function Radios(){
                     }
                 }
             } )
+            console.log("Section 2 Radio" + " " + c + " true");
     }
        // radio3 section 3 states
     const [radioSection3, setRadioSection3] = useState({
@@ -104,6 +105,7 @@ function Radios(){
                     }
                 }
             } )
+            console.log("Section 3 Radio" + " " + c + " true");
     }
 // radio3 section 3 states
     const [radioSection4, setRadioSection4] = useState({
@@ -159,7 +161,8 @@ function Radios(){
                         radio5 : true
                         }
                     }
-                } )
+                })
+                console.log("Section 4 Radio" + " Outline " + c + " true");
         }
 
 
@@ -229,7 +232,7 @@ function Radios(){
             <p className="checkboxHeader">Form Radio Outline</p>
             <table>
             <tr>
-            <td><span style={{"text-shadow": "0 0 0 #0275d8"}} name="1" type="button" id={radioSection4.radio1 ? "activeRadioOutline" : "inActiveRadio"} className="btn btn-outline-primary" onClick={toggleRadio4}>⚪</span></td>
+            <td><span style={{"text-shadow": "0 0 0 #0275d8"}} name="1" type="button" id={radioSection4.radio1 ? "activeRadioOutline" : "inActiveRadio"} className={"btn btn-outline-primary"} onClick={toggleRadio4}>⚪</span></td>
             <td><span className="label">Radio Outline Primary</span></td>
             </tr>
             <tr>

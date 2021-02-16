@@ -1,3 +1,5 @@
+/* 1. Background color, 2. border-rad, 3. on focus, 4. error color, 5. shadows, 6. padding, 7. height, 8. width */
+
 html, body
 {
     font-family: 'Poppins', sans-serif !important;
@@ -43,7 +45,7 @@ html, body
     border-radius: 15px;
 }
 
-.input:focus-visible
+.input:focus
 {
     box-shadow: none !important;   
 }
@@ -158,7 +160,6 @@ table.a
         margin-bottom: 5px;
         padding: 15px;
     }
-
     .buttonStyle
     {
         margin-left: 0px !important;
@@ -169,14 +170,51 @@ table.a
     border-radius: 0;
     margin: 0;
     }
+    .FileButtonS
+    {
+    margin-left: -3px;
+    border-radius: 0;
+    margin: 0;
+    position: relative;
+    height: 35px;
+    bottom: 1px;
+    border-bottom: inherit;
+    border-right: inherit;
+    }
+    .FileButtonL
+    {
+    margin-left: -2px;
+    border-radius: 0;
+    margin: 0;
+    height: 44px;
+    position: relative;
+    bottom: 1px;
+    border-bottom: inherit;
+    border-right: inherit;
+    }
+    #activeRadioOutline
+    {
+    border-radius: 100%;
+    padding-top: 0.15rem !important;
+    padding-right: 0.6rem !important;
+    padding-bottom: 0.58rem !important;
+    padding-left: 0.12rem !important;
+    height: 14.5px;
+    width: 13px;
+    font-weight:lighter !important;
+    margin-right: 1px;
+    color: transparent;
+    }
 }
 /* RADIO CUSTOM */
-#inActiveRadio{
+#inActiveRadio
+{
     border-radius: 100%;
     padding: 2px;
     padding-top: 2px;
     padding-bottom: 0.6px;
-    font-size: 8px;
+    height: 13px;
+    width: 13px;
     font-weight: 900 !important;
     background-color: white !important;
     border-color: black !important;
@@ -185,15 +223,19 @@ table.a
     height: 13px !important;
     margin-right: 0.5px;
 }
-#activeRadio{
+#activeRadio
+{
     border-radius: 100%;
     padding: 2.2px;
     padding-top: 2.5px;
     padding-bottom: 1px;
-    font-size: 6px;
+    padding-right: 0.5px;
+    height: 13px;
+    width: 13px;
     font-weight:lighter !important;
     margin-right: 1px;
     color: transparent;
+    transition: none;
 }
 
 #activeRadioOutline{
@@ -205,6 +247,10 @@ table.a
     font-weight:lighter !important;
     margin-right: 1px;
     color: transparent;
+    transition: none;
+}
+#activeRadioOutline:hover{
+    background-color: inherit;
 }
 /* Switch Slider CSS*/
 .switch 
@@ -438,71 +484,32 @@ input:checked + .sliderL:before
     margin-left: -2px;
     border-radius: 0;
     height: 35px;
-    border: none;
+    border-radius: 0;
     position: relative;
     bottom: 1px;
+    border-bottom: inherit;
+    border-right: inherit;
 }
 .FileButtonL
 {
     margin-left: -2px;
     border-radius: 0;
     padding: 5px;
-    border: none;
+    border-radius: 0;
     height: 44px;
     position: relative;
     top: 2px;
     padding-left: 15px !important;
     padding-right: 15px !important;
+    border-bottom: inherit;
+    border-right: inherit;
 }
 .custom-file-label
 {
     border-radius: 0;
 }
-/* .Actualinputfile
-{
- opacity: 0;
- position: absolute; 
- width: 38vw;  
- z-index: 3;
- cursor: pointer;
+
+.errrr{
+    position:absolute;
+    width: 70px;
 }
-.fakeFileLabel
-{   position: absolute;
-    display: inline-block;
-    z-index: 2;
-    width: 110px;
-    
-    border: 1px solid;
-    padding: 4px;
-    border-right: none;
-    padding-left: 9px;
-    background-color: rgb(223, 232, 238);
-    cursor: pointer;
-    font-size: 15px;
-    margin-bottom: 0px !important;
-}
-.fakeFileLabel:hover
-{
-    background-color: #ced4da;
-    cursor: pointer;
-}
-.fakeFileLabel:checked
-{
-    background-color: #131212;
-}
-.fakeFileInput
-{
-    position: absolute;
-    left: 110px;
-    top: -19px;
-    width: 30vw;
-    border: 1px solid;
-    padding-left: 10px;
-    height: 32px;
-}
-.fakeInputSection
-{
-    position: absolute;
-    z-index: 1;
-    top: 2px;
-} */
