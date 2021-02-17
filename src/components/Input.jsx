@@ -38,7 +38,7 @@ function Input(props){
         <input
         onChange={handleValue} 
         value={inputValue} 
-        className={"col-md-8 form-control input "  + (props.focusBorder) + " " }
+        className={"col-md-8 form-control input "  + "w-" +(props.width ? props.width : null ) + " " }
         style={{
             backgroundColor:(props.bgColor ? props.bgColor : null),
             borderRadius:(props.borderRadius ? props.borderRadius : null)
@@ -78,7 +78,7 @@ function SmallerInput(props){
         type={props.t}
         required
         />
-        <button onClick={setColor} className="btn btn-sm btn-dark ml-3 buttonStyle">Submit</button>
+        <button onClick={setColor} className="btn btn-sm btn-dark ml-3 buttonStyle">⫸</button>
     </div>
     );
 }
@@ -110,7 +110,7 @@ function SelectInput(props){
             <option value="opel">Opel</option>
             <option value="audi">Audi</option>
         </select>
-        <button onClick={setSelectFunction} className="btn btn-sm btn-dark ml-3 buttonStyle">Submit</button>
+        <button onClick={setSelectFunction} className="btn btn-sm btn-dark ml-3 buttonStyle">⫸</button>
         </div>
     );
 }
@@ -145,7 +145,7 @@ function DataList(props){
             <option value={props.list4}/>
             <option value={props.list5}/>
         </datalist>
-        <button onClick={setDataFunction} className="btn btn-md btn-dark ml-3 buttonStyle">Submit</button>
+        <button onClick={setDataFunction} className="btn btn-md btn-dark ml-3 buttonStyle">⫸</button>
         </div>
     );
 }
@@ -184,7 +184,10 @@ function SmallerTextArea(props){
             borderRadius:(props.borderRadius ? props.borderRadius : null),
                 }}     
         />
-        <button type="submit" className={props.size=="sm" ? "btn btn-sm btn-dark ml-3 buttonStyle" : props.size=="lg" ? "btn btn-lg btn-dark ml-3 buttonStyle" : "btn btn-md btn-dark ml-3 buttonStyle"}>Enter</button><br/>
+        <button 
+        type="submit" 
+        className={props.size=="sm" ? "btn btn-sm btn-dark ml-3 buttonStyle" : props.size=="lg" ? "btn btn-lg btn-dark ml-3 buttonStyle" : "btn btn-md btn-dark ml-3 buttonStyle"}
+        >⫸</button><br/>
         </form>
         </div>
     );
@@ -321,7 +324,7 @@ function FileInput(props){
         className={props.size=="sm" ? "custom-file-input form-control-sm" : props.size=="lg" ? "custom-file-input form-control-lg" : "custom-file-input form-control-md"} 
         id="customFile"/>
         <label 
-        className={props.size=="sm" ? "custom-file-label col-form-label-sm" : props.size=="lg" ? "custom-file-label col-form-label-lg" : "custom-file-label col-form-label-md"} 
+        className={props.size=="sm" ? "custom-file-label col-form-label-sm shadow-none" : props.size=="lg" ? "custom-file-label col-form-label-lg shadow-none" : "custom-file-label col-form-label-md shadow-none"} 
         for="customFile">{props.l}</label>
         </div>
         </div>
@@ -330,10 +333,16 @@ function FileInput(props){
 }
 
 function FileInputCustom(props){
+    
+    const[files,setFiles] = useState(null);
 
-    function recFile(e){
+    function rcvFile(e){
         let files = e.target.files;
-        console.log(files);
+        setFiles(files)
+    }
+
+    function showFile(){
+        console.log(files)
     }
 
     return (
@@ -345,17 +354,19 @@ function FileInputCustom(props){
         <div className="custom-file">
         <input 
         type="file" 
-        onChange={recFile} 
+        onChange={rcvFile} 
         className={props.size=="sm" ? "custom-file-input form-control-sm my-auto" : props.size=="lg" ? "custom-file-input form-control-lg my-auto" : "custom-file-input form-control-md my-auto"} 
-        id="customFile"/>
+        id="customFile customFileCss"/>
         <label 
-        className={props.size=="sm" ? "custom-file-label col-form-label-sm my-auto" : props.size=="lg" ? "custom-file-label col-form-label-lg my-auto" : "custom-file-label col-form-label-md my-auto"} 
+        className={props.size=="sm" ? "custom-file-label col-form-label-sm my-auto shadow-none" : props.size=="lg" ? "custom-file-label col-form-label-lg my-auto shadow-none" : "custom-file-label col-form-label-md my-auto shadow-none"} 
         for="customFile">{props.l}</label>
         </div>
         </div>
         </td>
         <td>
-            <button className={props.size=="sm" ? "btn-sm btn-primary FileButtonS my-auto shadow-none" : props.size=="lg" ? "btn-lg btn-primary FileButtonL my-auto shadow-none" : "btn btn-primary FileButton my-auto shadow-none"}>Button</button>
+            <button 
+            onClick={showFile} 
+            className={props.size=="sm" ? "btn-sm btn-primary FileButtonS my-auto shadow-none" : props.size=="lg" ? "btn-lg btn-primary FileButtonL my-auto shadow-none" : "btn btn-primary FileButton my-auto shadow-none"}>⫸</button>
         </td>
         </tr>
         </table>
