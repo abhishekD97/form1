@@ -27,34 +27,28 @@ function Input(props){
     //         msg = "You have entered an invalid email address!";
     //     }
     //     }
-    function myF(e){
-        console.log(e.target);
-        Setss("m")
-    }
-    
+    // function errorTriggerFuntion(e){
+    //     console.log(e.target);
+    //     Setss("error " + props.l)
+    // }onInvalidCapture={errorTriggerFuntion}
     return (
     <div>
     <form onSubmit={setValue}>
         <label className="capitalize col-md-2 label">{props.l}</label>
-        <input onInvalidCapture={myF}
+        <input
         onChange={handleValue} 
         value={inputValue} 
-        className={"col-md-8 form-control input "  + (props.focusBorder) +" "}
+        className={"col-md-8 form-control input "  + (props.focusBorder) + " " }
         style={{
             backgroundColor:(props.bgColor ? props.bgColor : null),
-            borderRadius:(props.borderRadius ? props.borderRadius : null),
+            borderRadius:(props.borderRadius ? props.borderRadius : null)
             }} 
         autoComplete="off" 
         type={props.t} 
         placeholder={props.placeHolder ? props.placeHolder : null}
         required
         />
-        <button type="submit" className="btn btn-md btn-dark ml-3 buttonStyle">Enter</button><br/>
-        <div className="errrr">
-            <span>
-                {ss}
-            </span>
-        </div>
+        <button type="submit" className="btn btn-md btn-dark ml-3 buttonStyle">⫸</button><br/>
     </form>
     </div>
     );
@@ -62,48 +56,96 @@ function Input(props){
 
 function SmallerInput(props){
 
-    const [colorState, setColorState] = useState("#8ab3f4");
+    const [colorState, setColorState] = useState("#91a8ee");
+
+    function handleChange(e){
+        setColorState(e.target.value);
+    }
 
     function setColor(e)
     {
-        setColorState(e.target.value)
-        console.log(e.target.value)
+        console.log(colorState);
     }
 
     return (
     <div>
+    
         <label className="capitalize col-md-2 label">{props.l}</label>
-        <input value={colorState} onChange={setColor} className="smallerWidth input" type={props.t}/>
+        <input 
+        onChange={handleChange} 
+        value={colorState} 
+        className="smallerWidth input" 
+        type={props.t}
+        required
+        />
+        <button onClick={setColor} className="btn btn-sm btn-dark ml-3 buttonStyle">Submit</button>
     </div>
     );
 }
 
 function SelectInput(props){
+
+    const[select, setSelect] = useState("");
+
+    function setSelectFunction(e){
+        setSelect(select);
+        console.log(select);
+    }
+
     return (
         <div>
         <label className="capitalize col-md-2 label">{props.l}</label>
-        <select className="input" name="cars" id="cars">
+        <select 
+        className="input selectInput"
+        style={{
+            backgroundColor:(props.bgColor ? props.bgColor : null),
+            borderRadius:(props.borderRadius ? props.borderRadius : null),
+            }}  
+        name="cars" 
+        id="cars"
+        onChange={ (e) => setSelect(e.target.value) }
+        >
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
             <option value="opel">Opel</option>
             <option value="audi">Audi</option>
         </select>
+        <button onClick={setSelectFunction} className="btn btn-sm btn-dark ml-3 buttonStyle">Submit</button>
         </div>
     );
 }
 
 function DataList(props){
+
+    const [dataList, setDataList] = useState("");
+
+    function setDataFunction(e){
+        setDataList(e.target.value);
+        console.log(dataList);
+    }
+
     return (
         <div>
         <label className="capitalize col-md-2 label">{props.l}</label>
-        <input className="form-control form-control-sm col-md-8 input" list="browsers" name="browser" id="browser"></input>
-        <datalist id="browsers">
+        <input onChange={ (e) => setDataList(e.target.value) } 
+        value={dataList}
+        className="form-control form-control-sm col-md-8 input"
+        style={{
+            backgroundColor:(props.bgColor ? props.bgColor : null),
+            borderRadius:(props.borderRadius ? props.borderRadius : null),
+            }}
+        list="browsers" 
+        name="browser" 
+        id="browser"
+        />
+        <datalist  id="browsers">
             <option value={props.list1}/>
             <option value={props.list2}/>
             <option value={props.list3}/>
             <option value={props.list4}/>
             <option value={props.list5}/>
         </datalist>
+        <button onClick={setDataFunction} className="btn btn-md btn-dark ml-3 buttonStyle">Submit</button>
         </div>
     );
 }
@@ -163,7 +205,10 @@ function CheckboxInputLeft(props){
         <div>
         <table>
         <tr>
-            <td name={props.l} type="button" id={isActive ? "activeBtn" : "inActiveBtn"} className={isActive ? classNames1 : classNames2} onClick={toggleClass}>✔</td>
+            <td name={props.l} 
+            type="button" id={isActive ? "activeBtn" : "inActiveBtn"} 
+            className={isActive ? classNames1 : classNames2} 
+            onClick={toggleClass}>✔</td>
             <td className="label ml-1">{props.l}</td>
         </tr>
         </table>
@@ -184,7 +229,12 @@ function CheckboxInputRight(props){
         <table className="a">
         <tr>
             <td><span className="label">{props.l}</span></td>
-            <td><span name={props.l} type="button" id={isActive ? "activeBtn" : "inActiveBtn"} className={isActive ? "btn btn-dark" : "btn btn-outline-dark"} onClick={toggleClass}>✔</span></td>
+            <td><span 
+            name={props.l} 
+            type="button" 
+            id={isActive ? "activeBtn" : "inActiveBtn"} 
+            className={isActive ? "btn btn-dark" : "btn btn-outline-dark"} 
+            onClick={toggleClass}>✔</span></td>
         </tr>
         </table>
         </div>
@@ -202,7 +252,11 @@ function Radio(props){
         <div>
         <table>
         <tr>
-            <td><span type="button" id={isActive ? "activeRadio" : "inActiveRadio"} className="btn btn-dark" onClick={toggleClass} state={props.state ? toggleClass : null}>⚪</span></td>
+            <td><span type="button" 
+            id={isActive ? "activeRadio" : "inActiveRadio"} 
+            className="btn btn-dark" 
+            onClick={toggleClass} 
+            state={props.state ? toggleClass : null}>⚪</span></td>
             <td><span className="label">hey</span></td>
         </tr>
         </table>
@@ -228,8 +282,13 @@ function Switch(props){
         <td>
         <div className="">
             <label className={props.size=="lg" ? "switchL mr-2" : props.size=="sm" ? "switchS mr-2" : props.size=="def" ? "switch mr-2" : "switch mr-2"}>
-            <input type="checkbox" disabled={props.state ? true : false } value={switchState ? true  : false} onClick={setSwitchFunction}/>
-            <span class="slider round" className={props.size=="lg" ? "sliderL round" : props.size=="sm" ? "sliderS round" : props.size=="def" ? "slider round" : "slider round"}></span>
+            <input 
+            type="checkbox" 
+            disabled={props.state ? true : false } 
+            value={switchState ? true  : false} 
+            onClick={setSwitchFunction}/>
+            <span class="slider round" 
+            className={props.size=="lg" ? "sliderL round" : props.size=="sm" ? "sliderS round" : props.size=="def" ? "slider round" : "slider round"}></span>
             </label>
         </div>
         </td>
@@ -256,8 +315,14 @@ function FileInput(props){
         <div>
         <div className="form-group my-auto">
         <div className="custom-file">
-        <input type="file" onChange={recFile} className={props.size=="sm" ? "custom-file-input form-control-sm" : props.size=="lg" ? "custom-file-input form-control-lg" : "custom-file-input form-control-md"} id="customFile"/>
-        <label className={props.size=="sm" ? "custom-file-label col-form-label-sm" : props.size=="lg" ? "custom-file-label col-form-label-lg" : "custom-file-label col-form-label-md"} for="customFile">{props.l}</label>
+        <input 
+        type="file" 
+        onChange={recFile} 
+        className={props.size=="sm" ? "custom-file-input form-control-sm" : props.size=="lg" ? "custom-file-input form-control-lg" : "custom-file-input form-control-md"} 
+        id="customFile"/>
+        <label 
+        className={props.size=="sm" ? "custom-file-label col-form-label-sm" : props.size=="lg" ? "custom-file-label col-form-label-lg" : "custom-file-label col-form-label-md"} 
+        for="customFile">{props.l}</label>
         </div>
         </div>
         </div>
@@ -278,8 +343,14 @@ function FileInputCustom(props){
         <td>
         <div className="form-group my-auto">
         <div className="custom-file">
-        <input type="file" onChange={recFile} className={props.size=="sm" ? "custom-file-input form-control-sm my-auto" : props.size=="lg" ? "custom-file-input form-control-lg my-auto" : "custom-file-input form-control-md my-auto"} id="customFile"/>
-        <label className={props.size=="sm" ? "custom-file-label col-form-label-sm my-auto" : props.size=="lg" ? "custom-file-label col-form-label-lg my-auto" : "custom-file-label col-form-label-md my-auto"} for="customFile">{props.l}</label>
+        <input 
+        type="file" 
+        onChange={recFile} 
+        className={props.size=="sm" ? "custom-file-input form-control-sm my-auto" : props.size=="lg" ? "custom-file-input form-control-lg my-auto" : "custom-file-input form-control-md my-auto"} 
+        id="customFile"/>
+        <label 
+        className={props.size=="sm" ? "custom-file-label col-form-label-sm my-auto" : props.size=="lg" ? "custom-file-label col-form-label-lg my-auto" : "custom-file-label col-form-label-md my-auto"} 
+        for="customFile">{props.l}</label>
         </div>
         </div>
         </td>

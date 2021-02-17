@@ -40,9 +40,9 @@ html, body
 .input
 {
     display: inline-block !important;
-    padding: 1rem 1.1rem;
     border: none;
     border-radius: 15px;
+    padding: 1rem 1.1rem;
 }
 
 .input:focus
@@ -50,9 +50,14 @@ html, body
     box-shadow: none !important;   
 }
 
+.selectInput
+{
+    padding: 2px !important;
+}
+
 .buttonStyle
 {
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .buttonStyle:focus
@@ -125,7 +130,7 @@ input, label
     padding-right: 4px !important;
     font-size: 10px !important;
     font-weight: bolder !important;
-    color: white !important;
+    color: #f2f2f2 !important;
 
 }
 
@@ -135,6 +140,11 @@ input, label
     padding-right: 4px !important;
     font-size: 10px !important;
     font-weight: bolder !important;
+    transition: none;
+}
+#activeBtn:hover
+{
+    
 }
 /* -------------- */
 
@@ -204,6 +214,7 @@ table.a
     font-weight:lighter !important;
     margin-right: 1px;
     color: transparent;
+    transition: none;
     }
 }
 /* RADIO CUSTOM */
@@ -509,7 +520,11 @@ input:checked + .sliderL:before
     border-radius: 0;
 }
 
-.errrr{
-    position:absolute;
-    width: 70px;
-}
+/* .inputError
+{
+    position: relative;
+    width: 50%;
+    height: 3px;
+    bottom: 10px;
+    left: 18%;
+} */
