@@ -3,10 +3,10 @@ import Input, {SmallerInput, SelectInput, DataList} from "./Input";
 
 function TextualInputs(props){
     return (
-        <div  className="form">
+        <div className="form">
         <p className="contentHeader col-md-2">Textual inputs</p>
         {/* width for elements depends on parent col/row combination or width parameter takes percentage values like 25,50,75,100 */}
-        <Input t="text" l="text" bgColor="white" borderRadius="0" width="25"/> 
+        <Input t="text" l="text" bgColor="white" borderRadius="0"/> 
         <Input t="search" l="search" bgColor="white" borderRadius="0"/>
         <Input t="email" l="email" bgColor="white" borderRadius="0"/>
         <Input t="url" l="url" bgColor="white" borderRadius="0"/>
